@@ -1,7 +1,7 @@
 # FAC26 Week 1 | Server
 
 ## Dirty Little Secret
-You can view the project [here](https://https://w1-server-dgkn.fly.dev/)
+You can view the project [here](https://w1-server-dgkn.fly.dev/)
 
 ### Contributors: 
 [Dominic](https://github.com/dominicsimpson), [Georgia](https://github.com/rockyrelay), [Konstantina](https://github.com/konstantinakatmada), [Niete](https://github.com/psydwinder)
