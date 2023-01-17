@@ -2,15 +2,13 @@ const express = require("express");
 
 const server = express();
 
-module.exports = server;
-
 const secretList = [];
 
-server.get("/", (request, response) => {
+server.get("/", (req, res) => {
   const secrets = secretList.map((secret) => {
     return `<li>${secret} - ANON</li>`;
   });
-  response.send(`
+  const html = `
   <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,22 +23,22 @@ server.get("/", (request, response) => {
 
 <form method="POST">
   <label for="secret">Enter your secrets:</label>
-  <input for="secret" id="secret">
+  <input name="secret" id="secret">
   <button>Tell me</button>
 </form>
 <ul>
-${secrets}
+  ${secrets.join("")}
 </ul>
 </body>
 </html>
   
-
-  `);
+  `;
+  res.send(html);
 });
 
+server.post("/", express.urlencoded({ extended: false }), (req, res) => {
+  secretList.push(req.body.secret);
+  res.redirect("/");
+});
 
-server.post("/", express.urlencoded({extended:false}),(req,res)=>{
-    const secretMsg = req.body.secret;
-    secretList.push({secretMsg});
-    res.redirect("/");
-})
+module.exports = server;
