@@ -4,11 +4,10 @@ const server = express();
 
 module.exports = server;
 
-const secretsArray = [];
-// const post
+const secretList = [];
 
 server.get("/", (request, response) => {
-  const secrets = secretsArray.map((secret) => {
+  const secrets = secretList.map((secret) => {
     return `<li>${secret} - ANON</li>`;
   });
   response.send(`
@@ -39,4 +38,9 @@ ${secrets}
   `);
 });
 
-// post
+
+server.post("/", express.urlencoded({extended:false}),(req,res)=>{
+    const secretMsg = req.body.secret;
+    secretList.push({secretMsg});
+    res.redirect("/");
+})
