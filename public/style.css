@@ -2,6 +2,15 @@ body {
     background: black;
 }
 
+#logo {
+    float:      left;
+    background:	url(dirtylittlesecret_logo.jpg) no-repeat top left;
+    display:				block;
+    overflow:				hidden;
+    height:					300px;
+    width:					300px;
+}
+
 h1 {
     text-align: center;
     font-family: Garamond;
@@ -42,7 +51,7 @@ form {
     height: 300px;
     border: 1px solid white;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 75px;
     box-shadow: 0 0 10px 5px lightblue;
  }
 
