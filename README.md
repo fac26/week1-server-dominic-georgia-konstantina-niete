@@ -1,10 +1,16 @@
-# Week 1 | Server
+# FAC26 Week 1 | Server
 
-## Dominic, Georgia, Konstantina, Niete
+## Dirty Little Secret
+[Put link](https://)
 
----
+### Contributors: 
+[Dominic](https://github.com/dominicsimpson), [Georgia](https://github.com/rockyrelay), [Konstantina](https://github.com/konstantinakatmada), [Niete](https://github.com/psydwinder)
 
-Server project, week 1
+--- 
+
+## About
+
+The server project is to build a microblogging site. It should allow users to submit their own posts and view all the posts submitted by others. We decided to create a space to post secrets, that would be timestamped but anonymous, allowing the user to share all! 
 
 ---
 
