@@ -43,3 +43,17 @@ Make sure you have Git and Node (v18) installed.
 - [ ] Tests for each server route
 - [ ] A responsive, mobile-first design
 - [ ] Ensure your app is accessible to as many different users as possible
+
+---
+
+## Our process
+
+### Sprint Planning
+
+- [ ] A daily rundown of our work on [Day 1](https://hackmd.io/@kobcat/BJM3THNjs) with tickets of the tasks completed 
+- [ ] A daily rundown of our work on Day 2 with tickets of the tasks completed 
+
+
+
+
+
