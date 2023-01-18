@@ -31,6 +31,8 @@ server.get("/", (req, res) => {
 </form>
 <ul>
 ${secrets.join("<br>")}
+<form method="DELETE" action="/DELETE">
+<button id="del-btn" type="submit name="delete>X</button>
 </ul>
 </body>
 </html>
