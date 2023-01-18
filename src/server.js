@@ -10,7 +10,9 @@ const secretList = [];
 
 server.get("/", (req, res) => {
   const secrets = secretList.map((secret) => {
-    return `<li>${secret} - ANON</li>`;
+    const date = new Date;
+    const todayDate = date.toLocaleDateString("en-GB");
+    return `<li>${secret} - Anonymous - ${todayDate}</li>`;
   });
   const html = `
   <!DOCTYPE html>
