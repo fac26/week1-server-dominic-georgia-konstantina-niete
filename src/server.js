@@ -10,10 +10,11 @@ server.use(staticHandler);
 const secretList = [];
 
 server.get("/", (req, res) => {
-  const secrets = secretList.map((secret) => 
+  const secrets = secretList.map((secret) => {
     const date = new Date;
     const todayDate = date.toLocaleDateString("en-GB");
-    return `<li>${secret} - Anonymous - ${todayDate}</li>`;
+    return `<li>${secret}<br>
+    - Anonymous - ${todayDate}</li>`;
   });
 
   const html = `
@@ -33,8 +34,10 @@ server.get("/", (req, res) => {
 <div id="logo"></div>
 
 <div id="circle">
+  <div id="circle-text">
   <h1>Dirty Little Secret</h1>
   <h2>A place to share your deepest darkest secrets anonymously</h2>
+  </div>
 </div>
 <form method="POST">
   <label for="secret">Enter your secrets:</label>
