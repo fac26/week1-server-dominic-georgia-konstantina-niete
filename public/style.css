@@ -59,3 +59,13 @@ form {
     box-shadow: 0 0 10px 5px lightblue;
  }
 
+ li {
+    background: white;
+    color: black;
+    width: 450px;
+    text-align: center;
+    margin: 0 auto;    
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 3px;
+ }
