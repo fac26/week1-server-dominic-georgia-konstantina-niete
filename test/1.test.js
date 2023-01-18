@@ -4,8 +4,9 @@ const server = require("../src/server.js");
 
 
 test ("HOME route returns expected page", async () => {
-    const app = server.listen(9876);
-    const response = await fetch("http://localhost:9876");
+    const app = server.listen(0);
+    const {port} = app.address();
+    const response = await fetch (`http://localhost:${port}`)
     app.close();
 
     assert.equal(response.status,200);
