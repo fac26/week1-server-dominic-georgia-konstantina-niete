@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 
 const server = express();
@@ -9,11 +10,12 @@ server.use(staticHandler);
 const secretList = [];
 
 server.get("/", (req, res) => {
-  const secrets = secretList.map((secret) => {
+  const secrets = secretList.map((secret) => 
     const date = new Date;
     const todayDate = date.toLocaleDateString("en-GB");
     return `<li>${secret} - Anonymous - ${todayDate}</li>`;
   });
+
   const html = `
   <!DOCTYPE html>
 <html lang="en">
@@ -34,25 +36,27 @@ server.get("/", (req, res) => {
   <h1>Dirty Little Secret</h1>
   <h2>A place to share your deepest darkest secrets anonymously</h2>
 </div>
-
 <form method="POST">
   <label for="secret">Enter your secrets:</label>
-  <input name="secret" id="secret">
+  <textarea name="secret" id="secret" placeholder="I like to collect dead leaves and paint them green"></textarea>
   <button>Tell me</button>
 </form>
 <ul>
-  ${secrets.join("<br>")}
+${secrets.join("<br>")}
 </ul>
 </body>
 </html>
-  
-  `;
+`;
   res.send(html);
 });
 
-server.post("/", express.urlencoded({ extended: false }), (req, res) => {
-  secretList.push(req.body.secret);
-  res.redirect("/");
-});
+server.post(
+  "/",
+  express.urlencoded({ extended: false }),
+  (request, response) => {
+    secretList.push(request.body.secret);
+    response.redirect("/");
+  }
+);
 
 module.exports = server;
