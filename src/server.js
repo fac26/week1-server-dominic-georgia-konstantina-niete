@@ -2,17 +2,16 @@ const express = require("express");
 
 const server = express();
 
-
-
 const secretList = [];
 
-server.get("/", (request, response) => {
+server.get("/", (req, res) => {
   const secrets = secretList.map((secret) => {
     const date = new Date;
     const todayDate = date.toLocaleDateString("en-GB");
     return `<li>${secret} - Anonymous - ${todayDate} </li>`;
   });
-  const html =`
+
+  const html = `
   <!DOCTYPE html>
 <html lang="en">
 <head>
