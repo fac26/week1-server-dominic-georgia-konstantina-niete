@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 
 const server = express();
@@ -6,7 +7,7 @@ const secretList = [];
 
 server.get("/", (req, res) => {
   const secrets = secretList.map((secret) => {
-    const date = new Date;
+    const date = new Date();
     const todayDate = date.toLocaleDateString("en-GB");
     return `<li>${secret} - Anonymous - ${todayDate} </li>`;
   });
@@ -33,13 +34,17 @@ ${secrets.join("<br>")}
 </ul>
 </body>
 </html>
-`
-response.send(html);
+`;
+  res.send(html);
 });
 
-server.post("/", express.urlencoded({extended:false}),(request,response)=>{
+server.post(
+  "/",
+  express.urlencoded({ extended: false }),
+  (request, response) => {
     secretList.push(request.body.secret);
     response.redirect("/");
-})
+  }
+);
 
 module.exports = server;
