@@ -1,10 +1,16 @@
-# Week 1 | Server
+# FAC26 Week 1 | Server
 
-## Dominic, Georgia, Konstantina, Niete
+## Dirty Little Secret
+You can view the project [here](https://w1-server-dgkn.fly.dev/)
 
----
+### Contributors: 
+[Dominic](https://github.com/dominicsimpson), [Georgia](https://github.com/rockyrelay), [Konstantina](https://github.com/konstantinakatmada), [Niete](https://github.com/psydwinder)
 
-Server project, week 1
+--- 
+
+## About
+
+The server project is to build a microblogging site. It should allow users to submit their own posts and view all the posts submitted by others. We decided to create a space to post secrets, that would be timestamped but anonymous, allowing the user to share all! 
 
 ---
 
@@ -37,3 +43,17 @@ Make sure you have Git and Node (v18) installed.
 - [ ] Tests for each server route
 - [ ] A responsive, mobile-first design
 - [ ] Ensure your app is accessible to as many different users as possible
+
+---
+
+## Our process
+
+### Sprint Planning
+
+- [ ] A daily rundown of our work on [Day 1](https://hackmd.io/@kobcat/BJM3THNjs) with tickets of the tasks completed 
+- [ ] A daily rundown of our work on Day 2 with tickets of the tasks completed 
+
+
+
+
+

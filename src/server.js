@@ -1,18 +1,23 @@
+const { response } = require("express");
 const express = require("express");
 
 const server = express();
 
+const staticHandler = express.static("public");
 
+server.use(staticHandler);
 
 const secretList = [];
 
-server.get("/", (request, response) => {
+server.get("/", (req, res) => {
   const secrets = secretList.map((secret) => {
     const date = new Date;
     const todayDate = date.toLocaleDateString("en-GB");
-    return `<li>${secret} - Anonymous - ${todayDate} </li>`;
+    return `<li>${secret}<br>
+    - Anonymous - ${todayDate}</li>`;
   });
-  const html =`
+
+  const html = `
   <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,10 +25,20 @@ server.get("/", (request, response) => {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <title>Dirty Little Secrets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@500&display=swap" rel="stylesheet">
+  <title>Document</title>
 </head>
 <body>
-<h1>Dirty Little Secrets</h1>
+<div id="logo"></div>
+
+<div id="circle">
+  <div id="circle-text">
+  <h1>Dirty Little Secret</h1>
+  <h2>A place to share your deepest darkest secrets anonymously</h2>
+  </div>
+</div>
 <form method="POST">
   <label for="secret">Enter your secrets:</label>
   <textarea name="secret" id="secret" placeholder="I like to collect dead leaves and paint them green"></textarea>
@@ -34,13 +49,17 @@ ${secrets.join("<br>")}
 </ul>
 </body>
 </html>
-`
-response.send(html);
+`;
+  res.send(html);
 });
 
-server.post("/", express.urlencoded({extended:false}),(request,response)=>{
+server.post(
+  "/",
+  express.urlencoded({ extended: false }),
+  (request, response) => {
     secretList.push(request.body.secret);
     response.redirect("/");
-})
+  }
+);
 
 module.exports = server;
