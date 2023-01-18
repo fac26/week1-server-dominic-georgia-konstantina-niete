@@ -10,5 +10,5 @@ test("Missing routes", async () => {
 
     assert.equal(response.status, 404);
     const body = await response.text();
-    assert.match(body, /not-working/);
+    assert.match(body, /not-working/)
 })
