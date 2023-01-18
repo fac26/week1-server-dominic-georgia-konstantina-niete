@@ -35,6 +35,10 @@ form {
     margin: 2px;
  }
 
+ label[for="secret"] {
+    font-family: 'Roboto', sans-serif;
+ }
+
  #secret {
     padding: 30px;
  }
