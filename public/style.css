@@ -13,16 +13,16 @@ body {
 
 h1 {
     text-align: center;
-    font-family: Garamond;
+    font-family: 'Abril Fatface', cursive;    
     color: white;
     margin-top: 125px;
 }
 
 h2 {
     text-align: center;
-    font-family: Garamond;
     color: white;
     font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 form {
