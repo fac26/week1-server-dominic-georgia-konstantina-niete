@@ -6,8 +6,11 @@ const secretList = [];
 
 server.get("/", (req, res) => {
   const secrets = secretList.map((secret) => {
-    return `<li>${secret} - ANON</li>`;
+    const date = new Date;
+    const todayDate = date.toLocaleDateString("en-GB");
+    return `<li>${secret} - Anonymous - ${todayDate} </li>`;
   });
+
   const html = `
   <!DOCTYPE html>
 <html lang="en">
@@ -16,29 +19,27 @@ server.get("/", (req, res) => {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <title>Document</title>
+  <title>Dirty Little Secrets</title>
 </head>
 <body>
-<h1>Dirty Little Secret</h1>
-
+<h1>Dirty Little Secrets</h1>
 <form method="POST">
   <label for="secret">Enter your secrets:</label>
-  <input name="secret" id="secret">
+  <textarea name="secret" id="secret" placeholder="I like to collect dead leaves and paint them green"></textarea>
   <button>Tell me</button>
 </form>
 <ul>
-  ${secrets.join("<br>")}
+${secrets.join("<br>")}
 </ul>
 </body>
 </html>
-  
-  `;
-  res.send(html);
+`
+response.send(html);
 });
 
-server.post("/", express.urlencoded({ extended: false }), (req, res) => {
-  secretList.push(req.body.secret);
-  res.redirect("/");
-});
+server.post("/", express.urlencoded({extended:false}),(request,response)=>{
+    secretList.push(request.body.secret);
+    response.redirect("/");
+})
 
 module.exports = server;
