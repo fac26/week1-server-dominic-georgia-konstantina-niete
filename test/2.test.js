@@ -10,5 +10,6 @@ test("Missing routes", async () => {
 
     assert.equal(response.status, 404);
     const body = await response.text();
-    assert.match(body, /not-working/);
+    assert.match(body, /<h1>Dirty Little Secrets<\/h1>/i,
+    `Expected HTML to include <h1>Dirty Little Secrets</h1>, but received:\n${body}\n`)
 })
