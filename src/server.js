@@ -28,7 +28,7 @@ server.get("/", (req, res) => {
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto:wght@500&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <title>Dirty Little Secret</title>
 </head>
 <body>
 <div id="logo"></div>
