@@ -32,7 +32,7 @@ server.get("/", (req, res) => {
 
 <div id="circle">
   <h1>Dirty Little Secret</h1>
-  <h2>A place to share your deepest darkest secrets anoymously</h2>
+  <h2>A place to share your deepest darkest secrets anonymously</h2>
 </div>
 
 <form method="POST">
