@@ -1,99 +1,99 @@
 body {
-    background: black;
+    background:            black;
 }
 
 .logo {
-    float:                  left;
-    background:	url(dirtylittlesecret_logo.png) no-repeat top left;
-    display:				block;
-    overflow:				hidden;
-    height:					100px;
-    width:                  100px;
-    filter:                 invert(100%);
+    float:                 left;
+    background:	         url(dirtylittlesecret_logo.png) no-repeat top left;
+    display:				   block;
+    overflow:				   hidden;
+    height:					   100px;
+    width:                 100px;
+    filter:                invert(100%);
 }
 
 .circle-text{
-   position: relative;
-   top: -20px;
+   position:               relative;
+   top:                    -1rem;
 }
 
 h1 {
-    text-align: center;
-    font-family: 'Abril Fatface', cursive;    
-    color: white;
-    margin-top: 125px;
+    text-align:            center;
+    font-family:           'Abril Fatface', cursive;    
+    color:                 white;
+    margin-top:            125px;
 }
 
 h2 {
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    text-align:            center;
+    color:                 white;
+    font-size:             1rem;
+    font-family:           'Roboto', sans-serif;
+    font-weight:           100;
 }
 
 form {
-    text-align: center;
-    color: white;
+    text-align:            center;
+    color:                 white;
  }
 
  label {
-    display: block;
-    margin: 2px;
+    display:               block;
+    margin:                2px;
  }
 
  label[for="secret"] {
-    font-family: 'Roboto', sans-serif;
-    font-size: large;
-    margin-bottom: 10px;
+    font-family:           'Roboto', sans-serif;
+    font-size:             large;
+    margin-bottom:         10px;
  }
 
  #secret {
-   width: 300px;
-    padding: 30px;
-    border-radius: 15px;
+   width:                  300px;
+    padding:               30px;
+    border-radius:         15px;
  }
 
  button {
-    display: block;
-    margin: 2px auto;
-    padding: 10px;
-    width: 365px; /* feel free to change this to rems or another unit */
-    border-radius: 50px;
-    font-family: 'Roboto', sans-serif;
-    font-size: medium;
+    display:               block;
+    margin:                2px auto;
+    padding:               10px;
+    width:                 23rem;
+    border-radius:         50px;
+    font-family:           'Roboto', sans-serif;
+    font-size:             medium;
  }
 
  .circle {
-    border-radius: 50%;
-    width: 300px;
-    height: 300px;
-    border: 1px solid white;
-    margin: 0 auto;
-    margin-bottom: 75px;
-    margin-top: 40px;
-    box-shadow: 0 0 10px 5px lightblue;
+    border-radius:         50%;
+    width:                 300px;
+    height:                300px;
+    border:                1px solid white;
+    margin:                0 auto;
+    margin-bottom:         75px;
+    margin-top:            40px;
+    box-shadow:            0 0 10px 5px lightblue;
  }
 
 ul{
-   display: grid;
-   text-align: center;
-   justify-content: center;
-   margin-left: -50px;
+   display:                grid;
+   text-align:             center;
+   justify-content:        center;
+   margin-left:            -3.25rem;
  
 }
 
  li {
-   position: relative;
-    background: white;
-    color: black;
-    width: 450px;
-    text-align: center;
-    list-style-type: none;
-    font-family: 'segoe UI', sans-serif;
-    padding: 10px;
-    border-radius: 20px;
-    font-size: medium;
+   position:               relative;
+    background:            white;
+    color:                 black;
+    width:                 450px;
+    text-align:            center;
+    list-style-type:       none;
+    font-family:           'segoe UI', sans-serif;
+    padding:               10px;
+    border-radius:         20px;
+    font-size:             medium;
  }
 
  @media only screen and (max-width: 450px) {
@@ -102,7 +102,7 @@ ul{
       background: black;
   }
   
-  #logo {
+  .logo {
       position: absolute;
       background:	url(dirtylittlesecret_logo.png);
       top: 2px;
@@ -116,7 +116,7 @@ ul{
        
   }
   
-  #circle-text{
+  .circle-text{
      position: relative;
      top: -20px;
   }
@@ -162,7 +162,7 @@ ul{
       display: block;
       margin: 2px auto;
       padding: 10px;
-      width: 365px; /* feel free to change this to rems or another unit */
+      width: 365px;
       border-radius: 50px;
       font-family: 'Roboto', sans-serif;
       font-size: medium;
@@ -208,7 +208,7 @@ ul{
       background: black;
   }
   
-  #logo {
+  .logo {
       position: absolute;
       background:	url(dirtylittlesecret_logo.png);
       top: 2px;
@@ -222,7 +222,7 @@ ul{
        
   }
   
-  #circle-text{
+  .circle-text{
      position: relative;
      top: -20px;
 
@@ -278,7 +278,7 @@ ul{
       font-size: medium;
    }
   
-   #circle {
+   .circle {
       border-radius: 50%;
       width: 300px;
       height: 300px;
