@@ -22,7 +22,7 @@ const html = (secrets) => {return`
 </section>
 <form method="POST">
   <label for="secret">Enter your secrets:</label>
-  <textarea name="secret" id="secret" placeholder="I like to collect dead leaves and paint them green"></textarea>
+  <textarea name="secret" class="secret" placeholder="I like to collect dead leaves and paint them green"></textarea>
   <button>Tell me</button>
 </form>
 <ul>
