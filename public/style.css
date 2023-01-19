@@ -2,7 +2,7 @@ body {
     background: black;
 }
 
-#logo {
+.logo {
     float:                  left;
     background:	url(dirtylittlesecret_logo.png) no-repeat top left;
     display:				block;
@@ -64,7 +64,7 @@ form {
     font-size: medium;
  }
 
- #circle {
+ .circle {
     border-radius: 50%;
     width: 300px;
     height: 300px;
