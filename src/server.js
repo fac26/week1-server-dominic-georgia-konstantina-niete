@@ -44,7 +44,7 @@ server.get("/", (req, res) => {
   <button>Tell me</button>
 </form>
 <ul>
-${secrets.join("<br>")}
+${secrets.join(" ")}
 </ul>
 </body>
 </html>
