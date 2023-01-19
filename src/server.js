@@ -30,7 +30,7 @@ server.get("/", (req, res) => {
   <title>Dirty Little Secret</title>
 </head>
 <body>
-<section id="logo"></section>
+<section class="logo"></section>
 
 <section class="circle">
   <div class="circle-text">
