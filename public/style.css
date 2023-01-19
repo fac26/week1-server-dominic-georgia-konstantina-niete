@@ -48,7 +48,7 @@ form {
     margin-bottom:         10px;
  }
 
- #secret {
+ .secret {
    width:                  300px;
     padding:               30px;
     border-radius:         15px;
@@ -152,7 +152,7 @@ ul{
       margin-bottom: 10px;
    }
   
-   #secret {
+   .secret {
      width: 300px;
       padding: 30px;
       border-radius: 15px;
@@ -261,7 +261,7 @@ ul{
       margin-left: 30px;
    }
   
-   #secret {
+   .secret {
      width: 300px;
       padding: 30px;
       border-radius: 15px;
