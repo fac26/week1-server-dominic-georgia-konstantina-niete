@@ -15,7 +15,7 @@ server.get("/", (req, res) => {
     return `<li>${secret}<br>
     - Anonymous - ${todayDate}</li>`;
   });
-
+  
   res.send(html(secrets));
 });
 
