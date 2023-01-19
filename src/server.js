@@ -32,12 +32,12 @@ server.get("/", (req, res) => {
 <body>
 <div id="logo"></div>
 
-<div id="circle">
-  <div id="circle-text">
+<section class="circle">
+  <div class="circle-text">
   <h1>Dirty Little Secret</h1>
   <h2>A place to share your deepest darkest secrets anonymously</h2>
   </div>
-</div>
+</section>
 <form method="POST">
   <label for="secret">Enter your secrets:</label>
   <textarea name="secret" id="secret" placeholder="I like to collect dead leaves and paint them green"></textarea>
