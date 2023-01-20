@@ -1,2 +1,5 @@
 /node_modules
 .DS_Store
+
+# Ignore fly.toml files for cont-deployment
+!fly.tomlfly
