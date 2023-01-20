@@ -51,7 +51,7 @@ Make sure you have Git and Node (v18) installed.
 ### Sprint Planning
 
 - [ ] A daily rundown of our work on [Day 1](https://hackmd.io/@kobcat/BJM3THNjs) with tickets of the tasks completed 
-- [ ] A daily rundown of our work on [Day 2] (https://hackmd.io/@kobcat/r1-5oKHoj) with tickets of the tasks completed 
+- [ ] A daily rundown of our work on [Day 2](https://hackmd.io/@kobcat/r1-5oKHoj) with tickets of the tasks completed 
 
 
 
